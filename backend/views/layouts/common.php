@@ -157,6 +157,49 @@ Yii::info(Yii::$app->components["i18n"]["translations"]['*']['class'], 'test');
                         'visible' => Yii::$app->user->can('administrator'),
                     ],
                     [
+                        'label' => Yii::t('backend', 'Stalker'),
+                        'options' => ['class' => 'header'],
+                    ],
+                    [
+                        'label' => Yii::t('backend', 'Characters'),
+                        'url' => ['/character'],
+                        'icon' => '<i class="fa fa-thumb-tack"></i>',
+                        'active' => Yii::$app->controller->id === 'character',
+                    ],
+                    [
+                        'label' => Yii::t('backend', 'Characters Inventory'),
+                        'url' => ['/character-inventory'],
+                        'icon' => '<i class="fa fa-thumb-tack"></i>',
+                        'active' => Yii::$app->controller->id === 'character-inventory',
+                    ],
+                    [
+                        'label' => Yii::t('backend', 'Characters Moving'),
+                        'url' => ['/character-moving'],
+                        'icon' => '<i class="fa fa-thumb-tack"></i>',
+                        'active' => Yii::$app->controller->id === 'character-moving',
+                    ],
+                    [
+                        'label' => Yii::t('backend', 'Directory'),
+                        'url' => '#',
+                        'icon' => '<i class="fa fa-files-o"></i>',
+                        'options' => ['class' => 'treeview'],
+                        'active' => in_array(Yii::$app->controller->id, ['thing', 'location']),
+                        'items' => [
+                            [
+                                'label' => Yii::t('backend', 'Things'),
+                                'url' => ['/thing'],
+                                'icon' => '<i class="fa fa-file-o"></i>',
+                                'active' => Yii::$app->controller->id === 'thing',
+                            ],
+                            [
+                                'label' => Yii::t('backend', 'Locations'),
+                                'url' => ['/location'],
+                                'icon' => '<i class="fa fa-folder-open-o"></i>',
+                                'active' => Yii::$app->controller->id === 'location',
+                            ],
+                        ],
+                    ],
+                    [
                         'label' => Yii::t('backend', 'Content'),
                         'options' => ['class' => 'header'],
                     ],
