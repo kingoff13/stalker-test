@@ -1,0 +1,38 @@
+<?php
+
+use yii\helpers\Html;
+use yii\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $searchModel common\models\CharacterSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Characters';
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="character-index">
+
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <p>
+        <?php echo Html::a('Create Character', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+
+    <?php echo GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'id',
+            'name',
+            'killed',
+            'password_hash',
+            'created_at',
+            // 'logged_at',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
+
+</div>
