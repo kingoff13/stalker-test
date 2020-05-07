@@ -20,9 +20,9 @@ use yii\bootstrap\ActiveForm;
 
     <?php echo $form->field($model, 'password_hash')->textInput(['maxlength' => true]) ?>
 
-    <?php echo $form->field($model, 'created_at')->textInput() ?>
+<!--    --><?php //echo $form->field($model, 'created_at')->textInput() ?>
 
-    <?php echo $form->field($model, 'logged_at')->textInput() ?>
+<!--    --><?php //echo $form->field($model, 'logged_at')->textInput() ?>
 
     <div class="form-group">
         <?php echo Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
