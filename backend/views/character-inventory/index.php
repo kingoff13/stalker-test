@@ -1,5 +1,6 @@
 <?php
 
+use common\models\enums\ThingLocationEnum;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -44,7 +45,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             'used',
-            'location', //TODO: enums
+            [
+                'attribute' => 'location',
+                'label' => Yii::t('backend', 'Location'),
+                'format' => 'html',
+                'value' => function ($model) {
+                    return ThingLocationEnum::getLabel($model->location);
+                }
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

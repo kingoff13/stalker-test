@@ -1,6 +1,7 @@
 <?php
 
 use common\models\Character;
+use common\models\enums\ThingLocationEnum;
 use common\models\Thing;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -23,7 +24,7 @@ use yii\bootstrap\ActiveForm;
 
     <?php echo $form->field($model, 'used')->textInput() ?>
 
-    <?php echo $form->field($model, 'location')->textInput() ?>
+    <?php echo $form->field($model, 'location')->dropDownList(ThingLocationEnum::listData()) ?>
 
     <div class="form-group">
         <?php echo Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
