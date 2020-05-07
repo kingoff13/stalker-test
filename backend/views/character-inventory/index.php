@@ -22,13 +22,29 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+//            ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'character_id',
-            'thing_id',
+//            'character_id',
+            [
+                'attribute' => 'character.name',
+                'label' => Yii::t('backend', 'Character'),
+                'format' => 'html',
+                'value' => function ($model) {
+                    return Html::a($model->character->name, ['character/view', 'id' => $model->character_id]);
+                }
+            ],
+//            'thing_id',
+            [
+                'attribute' => 'thing.name',
+                'label' => Yii::t('backend', 'Thing'),
+                'format' => 'html',
+                'value' => function ($model) {
+                    return Html::a($model->thing->name, ['thing/view', 'id' => $model->thing->id]);
+                }
+            ],
             'used',
-            'location',
+            'location', //TODO: enums
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
