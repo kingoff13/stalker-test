@@ -11,6 +11,7 @@ use yii\db\ActiveRecord;
  * @property int $id
  * @property string $name
  * @property int $killed
+ * @property string $clan
  * @property string $password_hash
  * @property int $created_at
  * @property int $logged_at
@@ -35,7 +36,7 @@ class Character extends ActiveRecord
     {
         return [
             [['killed', 'created_at', 'logged_at'], 'integer'],
-            [['name', 'password_hash'], 'string', 'max' => 255],
+            [['name', 'password_hash', 'clan'], 'string', 'max' => 255],
         ];
     }
 
@@ -48,6 +49,7 @@ class Character extends ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'killed' => 'Killed',
+            'clan' => 'Clan',
             'password_hash' => 'Password Hash',
             'created_at' => 'Created At',
             'logged_at' => 'Logged At',

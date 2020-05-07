@@ -29,6 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name',
             'killed',
+            'clan',
             'password_hash',
             'created_at',
             'logged_at',

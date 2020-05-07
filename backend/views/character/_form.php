@@ -18,6 +18,8 @@ use yii\bootstrap\ActiveForm;
 
     <?php echo $form->field($model, 'killed')->textInput() ?>
 
+    <?php echo $form->field($model, 'clan')->textInput(['maxlength' => true]) ?>
+
     <?php echo $form->field($model, 'password_hash')->textInput(['maxlength' => true]) ?>
 
 <!--    --><?php //echo $form->field($model, 'created_at')->textInput() ?>

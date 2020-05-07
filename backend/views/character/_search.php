@@ -21,6 +21,8 @@ use yii\bootstrap\ActiveForm;
 
     <?php echo $form->field($model, 'killed') ?>
 
+    <?php echo $form->field($model, 'clan') ?>
+
     <?php echo $form->field($model, 'password_hash') ?>
 
     <?php echo $form->field($model, 'created_at') ?>

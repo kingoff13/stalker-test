@@ -17,7 +17,7 @@ class CharacterSearch extends Character
     {
         return [
             [['id', 'killed', 'created_at', 'logged_at'], 'integer'],
-            [['name', 'password_hash'], 'safe'],
+            [['name', 'password_hash', 'clan'], 'safe'],
         ];
     }
 
@@ -57,6 +57,7 @@ class CharacterSearch extends Character
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'clan', $this->clan])
             ->andFilterWhere(['like', 'password_hash', $this->password_hash]);
 
         return $dataProvider;
