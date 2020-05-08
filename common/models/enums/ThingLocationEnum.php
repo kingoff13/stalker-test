@@ -10,7 +10,7 @@ class ThingLocationEnum extends BaseEnum
     const BELT = 2;
     const STORAGE = 3;
 
-    public static $messageCategory = 'backend';
+    public static $messageCategory = 'common';
 
     /**
      * @var array

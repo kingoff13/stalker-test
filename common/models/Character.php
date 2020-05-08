@@ -3,6 +3,7 @@
 namespace common\models;
 
 
+use Yii;
 use yii\db\ActiveRecord;
 
 /**
@@ -46,13 +47,13 @@ class Character extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'killed' => 'Killed',
-            'clan' => 'Clan',
-            'password_hash' => 'Password Hash',
-            'created_at' => 'Created At',
-            'logged_at' => 'Logged At',
+            'id' => Yii::t('common', 'ID'),
+            'name' => Yii::t('common', 'Name'),
+            'killed' => Yii::t('common', 'Killed'),
+            'clan' => Yii::t('common', 'Clan'),
+            'password_hash' => Yii::t('common', 'Password Hash'),
+            'created_at' => Yii::t('common', 'Created At'),
+            'logged_at' => Yii::t('common', 'Logged At'),
         ];
     }
 

@@ -4,10 +4,10 @@
 /* @var $this yii\web\View */
 /* @var $model common\models\Character */
 
-$this->title = 'Update Character: ' . ' ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Characters', 'url' => ['index']];
+$this->title = Yii::t('backend', 'Update Character').': ' . ' ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('backend', 'Characters'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = Yii::t('backend', 'Update');
 ?>
 <div class="character-update">
 

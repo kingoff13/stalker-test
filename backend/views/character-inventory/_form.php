@@ -18,16 +18,20 @@ use yii\bootstrap\ActiveForm;
 
     <?php echo $form->errorSummary($model); ?>
 
-    <?php echo $form->field($model, 'character_id')->dropDownList(ArrayHelper::map(Character::find()->all(), 'id', 'name')) ?>
+    <?php echo $form->field($model, 'character_id')
+        ->label(Yii::t('backend', 'Character'))
+        ->dropDownList(ArrayHelper::map(Character::find()->all(), 'id', 'name')) ?>
 
-    <?php echo $form->field($model, 'thing_id')->dropDownList(ArrayHelper::map(Thing::find()->all(), 'id', 'name')) ?>
+    <?php echo $form->field($model, 'thing_id')
+        ->label(Yii::t('backend', 'Thing'))
+        ->dropDownList(ArrayHelper::map(Thing::find()->all(), 'id', 'name')) ?>
 
     <?php echo $form->field($model, 'used')->textInput() ?>
 
     <?php echo $form->field($model, 'location')->dropDownList(ThingLocationEnum::listData()) ?>
 
     <div class="form-group">
-        <?php echo Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?php echo Html::submitButton(Yii::t('backend', $model->isNewRecord ? 'Create' : 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

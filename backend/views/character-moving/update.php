@@ -4,10 +4,10 @@
 /* @var $this yii\web\View */
 /* @var $model common\models\CharacterMoving */
 
-$this->title = 'Update Character Moving: ' . ' ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Character Movings', 'url' => ['index']];
+$this->title = Yii::t('backend', 'Update Character Moving').': ' . ' ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('backend', 'Character Movings'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = Yii::t('backend', 'Update');
 ?>
 <div class="character-moving-update">
 

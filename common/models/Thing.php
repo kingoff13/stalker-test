@@ -3,6 +3,7 @@
 namespace common\models;
 
 
+use Yii;
 use yii\db\ActiveRecord;
 
 /**
@@ -39,8 +40,8 @@ class Thing extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Name',
+            'id' => Yii::t('common', 'ID'),
+            'name' => Yii::t('common', 'Name'),
         ];
     }
 

@@ -3,6 +3,7 @@
 namespace common\models;
 
 
+use Yii;
 use yii\db\ActiveRecord;
 
 /**
@@ -44,10 +45,10 @@ class CharacterMoving extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'character_id' => 'Character ID',
-            'location_id' => 'Location ID',
-            'visit_at' => 'Visit At',
+            'id' => Yii::t('common', 'ID'),
+            'character_id' => Yii::t('common', 'Character ID'),
+            'location_id' => Yii::t('common', 'Location ID'),
+            'visit_at' => Yii::t('common', 'Visit At'),
         ];
     }
 

@@ -5,8 +5,8 @@
 /* @var $this yii\web\View */
 /* @var $model common\models\Location */
 
-$this->title = 'Create Location';
-$this->params['breadcrumbs'][] = ['label' => 'Locations', 'url' => ['index']];
+$this->title = Yii::t('backend', 'Create Location');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('backend', 'Locations'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="location-create">

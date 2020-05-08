@@ -179,7 +179,7 @@ Yii::info(Yii::$app->components["i18n"]["translations"]['*']['class'], 'test');
                         'active' => Yii::$app->controller->id === 'character-moving',
                     ],
                     [
-                        'label' => Yii::t('backend', 'Directory'),
+                        'label' => Yii::t('backend', 'Directories'),
                         'url' => '#',
                         'icon' => '<i class="fa fa-files-o"></i>',
                         'options' => ['class' => 'treeview'],

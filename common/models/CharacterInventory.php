@@ -3,6 +3,7 @@
 namespace common\models;
 
 
+use Yii;
 use yii\db\ActiveRecord;
 
 /**
@@ -45,11 +46,11 @@ class CharacterInventory extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'character_id' => 'Character ID',
-            'thing_id' => 'Thing ID',
-            'used' => 'Used',
-            'location' => 'Location',
+            'id' => Yii::t('common', 'ID'),
+            'character_id' => Yii::t('common', 'Character ID'),
+            'thing_id' => Yii::t('common', 'Thing ID'),
+            'used' => Yii::t('common', 'Used'),
+            'location' => Yii::t('common', 'Location'),
         ];
     }
 

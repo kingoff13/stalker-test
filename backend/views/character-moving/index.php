@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\CharacterMovingSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Character Movings';
+$this->title = Yii::t('backend', 'Character Movings');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="character-moving-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?php echo Html::a('Create Character Moving', ['create'], ['class' => 'btn btn-success']) ?>
+        <?php echo Html::a(Yii::t('backend', 'Create Character Moving'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php echo GridView::widget([

@@ -75,4 +75,21 @@ return [
     'User ID' => 'ID пользователя',
     'Username' => 'Имя пользователя',
     'Value' => 'Значение',
+
+    'Killed' => 'Убито',
+    'Clan' => 'Клан',
+    'Password Hash' => 'Пароль',
+    'Logged At' => 'Последний вход',
+
+    'Character ID' => 'ID Персонажа',
+    'Thing ID' => 'ID Предмета',
+    'Used' => 'Использовано',
+    'Location' => 'Расположение',
+
+    'Location ID' => 'Метоположение',
+    'Visit At' => 'Посещено',
+
+    'Backpack' => 'Рюкзак',
+    'Belt' => 'Пояс',
+    'Storage' => 'Хранилище',
 ];

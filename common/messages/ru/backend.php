@@ -164,4 +164,29 @@ return [
     'i18n' => 'I18N',
     'i18n Message' => 'Перевод',
     'i18n Source Message' => 'Текст',
+
+    'Character' => 'Персонаж',
+    'Characters' => 'Персонажи',
+    'Character Inventories' => 'Инвентарь',
+    'Characters Inventory' => 'Инвентарь',
+    'Characters Moving' => 'Передвижения',
+    'Character Movings' => 'Передвижения',
+    'Directories' => 'Справочники',
+    'Thing' => 'Предмет',
+    'Things' => 'Предметы',
+    'Location' => 'Локация',
+    'Locations' => 'Локации',
+
+    'Create Character' => 'Создать персонажа',
+    'Update Character' => 'Редактировать персонажа',
+    'Create Character Inventory' => 'Создать предмет в инвентаре',
+    'Update Character Inventory' => 'Редактировать предмет в инвентаре',
+    'Create Character Moving' => 'Создать запись о передвижении',
+    'Update Character Moving' => 'Редактировать запись о передвижении',
+    'Create Location' => 'Создать локацию',
+    'Update Location' => 'Редактировать локацию',
+    'Create Thing' => 'Создать предмет',
+    'Update Thing' => 'Редактировать предмет',
+
+
 ];
