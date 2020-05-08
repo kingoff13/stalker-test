@@ -4,8 +4,8 @@
 3. [Install docker-compose](https://docs.docker.com/compose/install/)
 4. Run
     ```bash
-    composer create-project yii2-starter-kit/yii2-starter-kit myproject.com --ignore-platform-reqs
-    cd myproject.com
+    git clone https://github.com/kingoff13/stalker-test.git stalkertest
+    cd stalkertest
     composer run-script docker:build
     ```
-5. Go to [http://yii2-starter-kit.localhost](http://yii2-starter-kit.localhost)
+5. Go to [http://stalkertest.localhost](http://stalkertest.localhost)
