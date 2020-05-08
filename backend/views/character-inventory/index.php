@@ -3,6 +3,7 @@
 use common\models\enums\ThingLocationEnum;
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii2mod\editable\EditableColumn;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\CharacterInventorySearch */
@@ -25,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 //            ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+//            'id',
 //            'character_id',
             [
                 'attribute' => 'character.name',
@@ -44,14 +45,28 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Html::a($model->thing->name, ['thing/view', 'id' => $model->thing->id]);
                 }
             ],
-            'used',
+//            'used',
             [
+                'class' => EditableColumn::class,
+                'attribute' => 'used',
+                'url' => ['change-used'],
+            ],
+            [
+                'class' => EditableColumn::class,
                 'attribute' => 'location',
+                'url' => ['change-location'],
                 'label' => Yii::t('backend', 'Location'),
                 'format' => 'html',
                 'value' => function ($model) {
                     return ThingLocationEnum::getLabel($model->location);
-                }
+                },
+                'type' => 'select',
+                'editableOptions' => function ($model) {
+                    return [
+                        'source' => ThingLocationEnum::listData(),
+                        'value' => $model->location,
+                    ];
+                },
             ],
 
             ['class' => 'yii\grid\ActionColumn'],

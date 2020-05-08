@@ -8,6 +8,7 @@ use common\models\CharacterSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii2mod\editable\EditableAction;
 
 /**
  * CharacterController implements the CRUD actions for Character model.
@@ -24,6 +25,24 @@ class CharacterController extends Controller
                 'actions' => [
                     'delete' => ['post'],
                 ],
+            ],
+        ];
+    }
+
+    public function actions()
+    {
+        return [
+            'change-name' => [
+                'class' => EditableAction::class,
+                'modelClass' => Character::class,
+            ],
+            'change-killed' => [
+                'class' => EditableAction::class,
+                'modelClass' => Character::class,
+            ],
+            'change-clan' => [
+                'class' => EditableAction::class,
+                'modelClass' => Character::class,
             ],
         ];
     }

@@ -8,6 +8,7 @@ use common\models\CharacterInventorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii2mod\editable\EditableAction;
 
 /**
  * CharacterInventoryController implements the CRUD actions for CharacterInventory model.
@@ -24,6 +25,20 @@ class CharacterInventoryController extends Controller
                 'actions' => [
                     'delete' => ['post'],
                 ],
+            ],
+        ];
+    }
+
+    public function actions()
+    {
+        return [
+            'change-used' => [
+                'class' => EditableAction::class,
+                'modelClass' => CharacterInventory::class,
+            ],
+            'change-location' => [
+                'class' => EditableAction::class,
+                'modelClass' => CharacterInventory::class,
             ],
         ];
     }

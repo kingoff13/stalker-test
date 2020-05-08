@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii2mod\editable\EditableColumn;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\CharacterSearch */
@@ -22,12 +23,27 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+//            ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'name',
-            'killed',
-            'clan',
+//            'id',
+//            'name',
+            [
+                'class' => EditableColumn::class,
+                'attribute' => 'name',
+                'url' => ['change-name'],
+            ],
+//            'killed',
+            [
+                'class' => EditableColumn::class,
+                'attribute' => 'killed',
+                'url' => ['change-killed'],
+            ],
+//            'clan',
+            [
+                'class' => EditableColumn::class,
+                'attribute' => 'clan',
+                'url' => ['change-clan'],
+            ],
 //            'password_hash',
             'created_at:datetime',
             // 'logged_at',
