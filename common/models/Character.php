@@ -4,6 +4,7 @@ namespace common\models;
 
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 
 /**
@@ -54,6 +55,21 @@ class Character extends ActiveRecord
             'password_hash' => Yii::t('common', 'Password Hash'),
             'created_at' => Yii::t('common', 'Created At'),
             'logged_at' => Yii::t('common', 'Logged At'),
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            'timestamp' => [
+                'class' => TimestampBehavior::class,
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at'],
+                ]
+            ]
         ];
     }
 
